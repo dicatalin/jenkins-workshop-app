@@ -7,13 +7,13 @@ pipeline {
     }
 
     parameters {
-        string(name: 'STAGING_SERVER_IP', defaultValue: '172.26.160.146', description: 'IP address of the staging server')
+        string(name: 'STAGING_SERVER_IP', defaultValue: '192.168.122.241', description: 'IP address of the staging server')
     }
 
     environment {
         REGISTRY = "ghcr.io"
         // For GitHub Container Registry, we need the full path: ghcr.io/username/repository
-        IMAGE_NAME = "${REGISTRY}/vbota1/jenkins-workshop-app".toLowerCase()
+        IMAGE_NAME = "${REGISTRY}/dicatalin/jenkins-workshop-app".toLowerCase()
     }
 
     stages {
